@@ -1,24 +1,31 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import api from '../variables';
 
-const createRocketList = (obj) => {
+const createMovieList = (obj) => {
   let result = {};
 
-  obj.forEach((item) => {
+  obj.items.forEach((item) => {
     result = {
       ...result,
       [item.id]:
       {
-        description: item.description,
-        imagen: item.flickr_images[0],
-        reserved: false,
-        title: item.rocket_name,
+        content: item.contentRating,
+        director: item.directors,
+        genre: item.genreList,
+        image: item.image,
+        plot: item.plot,
+        rating: parseFloat(item.imDbRating),
+        runtime: item.runtimeMins,
+        stars: item.stars,
+        title: item.title,
+        year: item.year,
       },
     };
   });
 
   return result;
 };
-
+/*
 const createMissionList = (obj) => {
   let result = {};
 
@@ -35,7 +42,7 @@ const createMissionList = (obj) => {
   });
   return result;
 };
-
+*/
 export const getMissions = createAsyncThunk(
   'rockets/getMissions',
   async () => {
@@ -46,20 +53,22 @@ export const getMissions = createAsyncThunk(
       },
     });
     const data = await response.json();
-    return createMissionList(data);
+    console.log(data);
+    // return createMissionList(data);
   },
 );
 
-export const getRockets = createAsyncThunk(
-  'rockets/getRockets',
+export const getCurrentMovies = createAsyncThunk(
+  'currentMovies/get',
   async () => {
-    const response = await fetch('https://api.spacexdata.com/v3/rockets', {
+    const response = await fetch(`${api.url}/InTheaters/${api.key}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
+    // console.log(`${api.url}/InTheaters/${api.key}`);
     const data = await response.json();
-    return createRocketList(data);
+    return createMovieList(data);
   },
 );

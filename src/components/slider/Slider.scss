@@ -1,0 +1,20 @@
+@import "../../config";
+
+.slider {
+  color: white;
+  display: flex;
+  height: auto;
+  min-height: 100px;
+  overflow-y: auto;
+  width: 100%;
+
+  .no-items {
+    align-items: center;
+    color: $color-secondary;    
+    display: flex;
+    height: 150px;
+    font-size: 0.9rem;
+    justify-content: center;
+    width: 100%;
+  }
+}

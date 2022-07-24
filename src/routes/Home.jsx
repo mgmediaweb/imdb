@@ -1,28 +1,38 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
+import { FiWifiOff } from 'react-icons/fi';
+import { useSelector } from 'react-redux';
+import { SpinnerCircularFixed } from 'spinners-react';
+import Slider from '../components/slider/Slider';
 
 const HomeScreen = () => {
-  // const { rockets } = useSelector((state) => state.rockets);
-  // const rocketList = Object.keys(rockets);
-  console.log('Home');
+  const { movies, status: moviesStatus } = useSelector((state) => state.inTheaters);
+
+  const inTheaters = (sts) => {
+    switch (sts) {
+      case 'success':
+        return (<Slider data={movies} />);
+      case 'failed':
+        return (
+          <div className="slider-win">
+            <FiWifiOff className="icon-big color-grey" />
+          </div>
+        );
+      default:
+        return (
+          <div className="slider-win">
+            <SpinnerCircularFixed color="silver" secondaryColor="black" />
+          </div>
+        );
+    }
+  };
 
   return (
-    <section>
-      <div className="container">
-        { /*
-          rocketList ? rocketList.map((item) => (
-            <Card
-              key={item}
-              id={item}
-              image={rockets[item].imagen}
-              description={rockets[item].description}
-              reserved={rockets[item].reserved}
-              title={rockets[item].title}
-            />
-          )) : <div className="text-center">No Rockets Availables</div>
-          */}
-      </div>
-    </section>
+    <div className="container space-header">
+      <section>
+        <h3>Movies in Theaters</h3>
+        { inTheaters(moviesStatus) }
+      </section>
+    </div>
   );
 };
 

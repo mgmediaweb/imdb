@@ -1,12 +1,7 @@
 @import "../../config";
 
-h1 {
-  font-size: 1.5rem;
-}
-
 header {
-  background-color: $color-background;
-  box-sizing: border-box;
+  background-color: $color-header;
   height: $header-height;
   left: 0;
   position: fixed;
@@ -16,17 +11,23 @@ header {
 
   .d-flex {
     align-items: center;
-    border-bottom: solid 1px $color-border;
     display: flex;
     height: $header-height;
     justify-content: space-between;
+    padding: 0 $padding;
   }
+
+  .logo-main {
+    height: $header-height - ($padding*2);
+    width: auto;    
+  }  
 }
 
 nav {
   display: none;
 }
 
+/*
 .active {
   background-color: transparentize($color-primary, 0.9) !important;
   color: $color-primary;
@@ -147,33 +148,13 @@ nav {
   }
 }
 
-.profile {
-  align-items: center;
-  border: solid 1px $color-border;
-  border-radius: 50%;
-  color: $color-primary;
-  display: flex;
-  height: $header-height/2;
-  justify-content: center;
-  transition: $transition;
-  width: $header-height/2;
-
-  &:hover {
-    background-color: transparentize($color-primary, 0.9);
-    cursor: pointer;
-    transition: $transition;
-  }
 }
-
+*/
 // #######################################################################################
 // ################################### DESKTOP VERSION ###################################
 // #######################################################################################
 
 @media (min-width: $breakpoint-tablet) {
-  h1 {
-    font-size: 1.85rem;
-  }
-
   nav {
     align-items: center;
     display: flex;
@@ -187,32 +168,22 @@ nav {
       }
 
       a {
-        color: $color-black;
-        display: inline-block;
-        font-size: 1rem;
+        border-radius: $rounded;
+        color: $color-primary;
+        display: block;
+        font-size: 0.9rem;
         letter-spacing: $padding*0.2;
+        padding: $padding/2 $padding;
         text-decoration: none;
+        transition: $transition;
 
         &:hover {
-          background-color: $color-background;
-          color: $color-primary;
+          background-color: $color-primary;
+          color: $color-header;
           text-decoration: none;
+          transition: $transition;
         }
       }
     }
-  }
-
-  .active {
-    background-color: $color-background !important;
-    color: $color-primary;
-    border-bottom: solid 1px $color-primary;
-  }
-
-  .logo-image {
-    height: 100%;
-  }
-
-  .movil-box {
-    display: none;
   }
 }

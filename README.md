@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Space Travelers' Hub
+# IMDB
 
-> Website App of the lists of rockets and missions available in the company Space X, here you can reserve the rockets you prefer, you can also select the missions you would like to attend.
+> Information comming soon.
 
 
 ## Built With
@@ -45,12 +45,6 @@ To view this document on your local computer:
 - GitHub: [@mgmediaweb](https://github.com/mgmediaweb)
 - Twitter: [@GonzoMedinaDev](https://twitter.com/GonzoMedinaDev)
 - LinkedIn: [gonzalo-medina-g](https://www.linkedin.com/in/gonzalo-medina-g/)
-
-👤 **Waqas Ahmad**
-
-- GitHub: [@githubhandle](https://github.com/waqaskanju)
-- Twitter: [@twitterhandle](https://twitter.com/waqaskanju)
-- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/waqaskanju/)
 
 ## 🤝 Contributing
 
