@@ -3,6 +3,7 @@ const api = {
   // key: 'k_tx7ferhu', // mgmediaweb
   // key: 'k_dnbddfq8', // velocreative
   key: 'k_dcg04wo9', // mgmediadev
+  // key: '',
 };
 
 export default api;

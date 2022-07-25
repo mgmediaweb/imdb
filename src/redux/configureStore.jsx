@@ -1,9 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
+import topMoviesSlice from './topMovies';
 import currentMoviesSlice from './currentMovies';
-// import rockets from './rockets/rockets';
+import topStars from './topStars';
 
 const reducer = {
+  topMovies: topMoviesSlice,
   inTheaters: currentMoviesSlice,
+  topStars,
 };
 
 const store = configureStore({

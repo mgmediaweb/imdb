@@ -1,8 +1,5 @@
-import {
-  Link,
-  NavLink,
-} from 'react-router-dom';
-// import { FiX , FiMenu } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { FiMenu, FiSearch } from 'react-icons/fi';
 import logo from '../../assets/images/logo.svg';
 import './Header.scss';
 
@@ -14,18 +11,17 @@ const Header = () => (
           <img src={logo} alt="IMDB Logo" className="logo-main" />
         </Link>
 
-        <Link to="/detail/tt1375666">detail</Link>
-
         <nav>
           <ul>
             <li>
-              <NavLink to="/rockets">Rockets</NavLink>
+              <Link to="/">
+                <FiSearch className="iconNav" />
+              </Link>
             </li>
             <li>
-              <NavLink to="/missions">Missions</NavLink>
-            </li>
-            <li>
-              <NavLink to="/profile">My Profile</NavLink>
+              <Link to="/">
+                <FiMenu className="iconNav" />
+              </Link>
             </li>
           </ul>
         </nav>

@@ -9,14 +9,16 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import DetailScreen from './routes/Detail';
 import HomeScreen from './routes/Home';
-import { getCurrentMovies } from './redux/connection';
+import TopDetailScreen from './routes/TopDetail';
+import { getCurrentMovies, getTopMovies, getTopStars } from './redux/connection';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(getTopStars());
+    dispatch(getTopMovies());
     dispatch(getCurrentMovies());
-    // dispatch(getMissions());
   }, []);
 
   return (
@@ -24,6 +26,7 @@ function App() {
       <Header />
       <Routes>
         <Route element={<DetailScreen />} path="/detail/:id" />
+        <Route element={<TopDetailScreen />} path="/topdetail/:id" />
         <Route index element={<HomeScreen />} />
         <Route
           element={

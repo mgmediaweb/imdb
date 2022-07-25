@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCurrentMovies } from './connection';
+import { getTopMovies } from './connection';
 
 const initialState = {
   movies: {},
   status: null,
 };
 
-const currentMoviesSlice = createSlice({
-  name: 'currentMovies',
+const topMoviesSlice = createSlice({
+  name: 'topMovies',
   initialState,
   reducers: {
     updateRocket: (state, action) => ({
@@ -22,16 +22,16 @@ const currentMoviesSlice = createSlice({
     }),
   },
   extraReducers: {
-    [getCurrentMovies.pending]: (state) => ({
+    [getTopMovies.pending]: (state) => ({
       ...state,
       status: 'loading',
     }),
-    [getCurrentMovies.fulfilled]: (state, action) => ({
+    [getTopMovies.fulfilled]: (state, action) => ({
       ...state,
       status: 'success',
       movies: action.payload,
     }),
-    [getCurrentMovies.rejected]: (state) => ({
+    [getTopMovies.rejected]: (state) => ({
       ...state,
       status: 'failed',
     }),
@@ -39,4 +39,4 @@ const currentMoviesSlice = createSlice({
 });
 
 // export const { updateRocket } = rockets.actions;
-export default currentMoviesSlice.reducer;
+export default topMoviesSlice.reducer;

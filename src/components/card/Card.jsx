@@ -9,16 +9,21 @@ const Card = (props) => {
     image,
     rating,
     title,
+    type,
   } = props;
+
+  let link = 'detail';
+
+  if (type === 'top') link = 'topdetail';
 
   return (
     <div className="card">
-      <Link to={`/detail/${id}`}>
+      <Link to={`/${link}/${id}`}>
         <div className="card-image" style={{ backgroundImage: `url(${image})` }} />
       </Link>
       <p className="rating">
         <FaStar className="icon-rating" />
-        {rating}
+        {rating !== null ? rating : '0.0'}
       </p>
       <p>{title}</p>
     </div>
@@ -28,13 +33,13 @@ const Card = (props) => {
 Card.propTypes = {
   id: PropTypes.string.isRequired,
   image: PropTypes.string,
-  rating: PropTypes.number,
+  rating: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 Card.defaultProps = {
-  image: 'https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg',
-  rating: 0.0,
+  image: 'https://imdb-api.com/images/128x176/nopicture.jpg',
 };
 
 export default Card;

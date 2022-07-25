@@ -3,7 +3,7 @@ import Card from '../card/Card';
 import './Slider.scss';
 
 const Slider = (props) => {
-  const { data } = props;
+  const { data, type } = props;
   const movieList = Object.keys(data);
 
   return (
@@ -16,6 +16,7 @@ const Slider = (props) => {
             key={item}
             rating={data[item].rating}
             title={data[item].title}
+            type={type}
           />
         )) : <div className="no-items">No items availables</div>
       }
@@ -25,6 +26,7 @@ const Slider = (props) => {
 
 Slider.propTypes = {
   data: PropTypes.objectOf.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default Slider;

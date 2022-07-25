@@ -2,15 +2,10 @@
 
 .card {
   height: auto;
-  max-width: 200px;
+  max-width: 180px;
   padding: 0 calc($padding/2);
   position: relative;
   flex: 0 0 40vw;
-
-  img {
-    height: auto;
-    width: 100%;
-  }
 
   &-image {
     background-color: #333333;
@@ -18,7 +13,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vw;
+    height: 55vw;
     margin-bottom: calc($padding/2);
     max-height: 280px;
     width: 100%;

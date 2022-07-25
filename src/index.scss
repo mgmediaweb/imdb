@@ -58,6 +58,7 @@ p {
 section {
   background-color: $color-header;
   height: auto;
+  margin-bottom: $spacer;
   padding: $padding;
   width: 100%;
 }
@@ -74,6 +75,7 @@ section {
 
 .cover {
   background-color: $color-header;
+  margin-bottom: $padding*2;
   padding-bottom: $padding;
 
   .info {
@@ -122,6 +124,10 @@ section {
   font-size: 2rem;
 }
 
+.margin-left {
+  margin-left: $padding;
+}
+
 .padding-wide {
   padding: 0 $padding;
 }
@@ -139,7 +145,7 @@ section {
 }
 
 .space-header {
-  padding-top: $header-height + $padding;
+  padding-top: $header-height + $spacer;
 }
 
 .youtube {

@@ -24,166 +24,32 @@ header {
 }
 
 nav {
-  display: none;
-}
-
-/*
-.active {
-  background-color: transparentize($color-primary, 0.9) !important;
-  color: $color-primary;
-}
-
-.cortain {
-  background-color: transparentize($color-secondary, 0.5);
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  transition: $transition;
-  width: 100vw;
-  z-index: 800;
-
-  &-hide {
-    backdrop-filter: none;
-    background-color: transparent;
-    transition: $transition*2;
-  }
-
-  &-show {
-    backdrop-filter: blur(5px);
-    background-color: transparentize($color-secondary, 0.7);
-    transition: $transition*2;
-  }
-}
-
-.logo-image {
-  height: 44px;
-  margin-right: $padding;
-  width: auto;
-}
-
-.logo-link {
   align-items: center;
-  color: $color-black;
   display: flex;
-  text-decoration: none;
-  transition: $transition;
-
-  &:hover {
-    opacity: 0.5;
-    text-decoration: none;
-    transition: $transition;
-  }
-
-  &:active,
-  &:visited {
-    color: $color-secondary;
-  }
-
-  img {
-    margin-right: $padding;
-  }
-}
-
-.logoLink {
-  color: $color-primary;
-  text-decoration: none;
-  transition: $transition;
-
-  &:hover {
-    color: transparentize($color-primary, 0.35);
-    transition: $transition;
-  }
-}
-
-.menu-movil {
-  background-color: $color-background;
-  display: block;
-  left: 0;
-  padding-top: $header-height;
-  position: fixed;
-  transition: $transition;
-  width: 100%;
-  z-index: 900;
 
   ul {
     list-style-type: none;
 
+    li {
+      display: inline-block;
+      margin: 0 $padding;
+    }
+
     a {
-      background-color: $color-background;
-      border-bottom: solid 1px $color-border;
-      color: $color-black;
-      display: block;
-      font-size: 1rem;
-      letter-spacing: $padding*0.2;
-      padding: $padding*2;
+      border-radius: $rounded;
+      color: $color-primary;
       text-decoration: none;
+      transition: $transition;
 
       &:hover {
-        color: $color-primary;
-      }
-    }
-  }
-}
-
-.movil-box {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 60px;
-  width: 60px;
-
-  &-icon {
-    font-size: 1.75rem;
-  }
-}
-
-.menu {
-  &-hide {
-    top: -500px;
-  }
-
-  &-show {
-    top: 0;
-  }
-}
-
-}
-*/
-// #######################################################################################
-// ################################### DESKTOP VERSION ###################################
-// #######################################################################################
-
-@media (min-width: $breakpoint-tablet) {
-  nav {
-    align-items: center;
-    display: flex;
-
-    ul {
-      list-style-type: none;
-
-      li {
-        display: inline-block;
-        margin-left: $padding*3;
-      }
-
-      a {
-        border-radius: $rounded;
-        color: $color-primary;
-        display: block;
-        font-size: 0.9rem;
-        letter-spacing: $padding*0.2;
-        padding: $padding/2 $padding;
+        color: $color-white;
         text-decoration: none;
         transition: $transition;
-
-        &:hover {
-          background-color: $color-primary;
-          color: $color-header;
-          text-decoration: none;
-          transition: $transition;
-        }
       }
     }
+  }
+
+  .iconNav {
+    font-size: 1.5rem;
   }
 }
