@@ -9,18 +9,7 @@ const initialState = {
 const currentMoviesSlice = createSlice({
   name: 'currentMovies',
   initialState,
-  reducers: {
-    updateRocket: (state, action) => ({
-      ...state,
-      movies: {
-        ...state.movies,
-        [action.payload]: {
-          ...state.rockets[action.payload],
-          reserved: !state.rockets[action.payload].reserved,
-        },
-      },
-    }),
-  },
+  reducers: {},
   extraReducers: {
     [getCurrentMovies.pending]: (state) => ({
       ...state,
@@ -38,5 +27,5 @@ const currentMoviesSlice = createSlice({
   },
 });
 
-// export const { updateRocket } = rockets.actions;
+export const { makeGenreSelector } = currentMoviesSlice.actions;
 export default currentMoviesSlice.reducer;

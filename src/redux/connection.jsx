@@ -9,7 +9,6 @@ const createMovieList = (obj, qty) => {
     let newDirector = null;
     let newGenre = null;
     let newPlot = null;
-    // let newRating = 0.0;
     let newRuntime = null;
     let newStars = null;
 
@@ -17,7 +16,6 @@ const createMovieList = (obj, qty) => {
     if (item.directors) newDirector = item.directors;
     if (item.genreList) newGenre = item.genreList;
     if (item.plot) newPlot = item.plot;
-    // if (item.imDbRating !== null) newRating = parseFloat(item.imDbRating);
     if (item.runtimeMins) newRuntime = item.runtimeMins;
 
     if (item.crew) newStars = item.crew;
@@ -67,7 +65,6 @@ export const getCurrentMovies = createAsyncThunk(
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
-    // console.log(`${api.url}/InTheaters/${api.key}`);
     const data = await response.json();
     return createMovieList(data, 20);
   },

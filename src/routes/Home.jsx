@@ -12,7 +12,7 @@ const HomeScreen = () => {
   const [moviesShow, setMoviesShow] = useState({});
   const [genres, setGenres] = useState({});
 
-  const genreSelector = {};
+  let genreSelector = {};
 
   const filterMovies = (event) => {
     if (event.target.value !== '') {
@@ -47,12 +47,18 @@ const HomeScreen = () => {
   };
 
   const makeGenreSelector = () => {
+    console.log('makeGenreSelector');
+    genreSelector = {};
+
     Object.keys(inTheaters).forEach((element) => {
       const tempData = inTheaters[element].genre;
 
       tempData.forEach((genre) => {
-        if (genreSelector[genre.value]) genreSelector[genre.value] += 1;
-        else genreSelector[genre.value] = 1;
+        if (genreSelector[genre.value]) {
+          genreSelector[genre.value] += 1;
+        } else {
+          genreSelector[genre.value] = 1;
+        }
       });
     });
     setGenres(genreSelector);
@@ -70,12 +76,24 @@ const HomeScreen = () => {
     <div className="container space-header">
       <section>
         <h3>Movies in Theaters</h3>
-        <select className="selector" onChange={filterMovies}>
-          <option value="">Select a Genre</option>
-          {
-            Object.keys(genres).length && Object.keys(genres).map((genre) => (<option value={genre} key={genre}>{`${genre} (${genres[genre]})`}</option>))
-          }
-        </select>
+        {
+          Object.keys(genres).length ? (
+            <select className="selector" onChange={filterMovies}>
+              <option value="">Select a Genre</option>
+              {
+                Object.keys(genres).map((genre) => (
+                  <option
+                    value={genre}
+                    key={genre}
+                  >
+                    {`${genre} (${genres[genre]})`}
+                  </option>
+                ))
+              }
+            </select>
+          ) : ('')
+        }
+
         { moviesList(moviesStatus, moviesShow, 'theaters') }
       </section>
       <section>

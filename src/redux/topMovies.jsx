@@ -9,18 +9,7 @@ const initialState = {
 const topMoviesSlice = createSlice({
   name: 'topMovies',
   initialState,
-  reducers: {
-    updateRocket: (state, action) => ({
-      ...state,
-      movies: {
-        ...state.movies,
-        [action.payload]: {
-          ...state.rockets[action.payload],
-          reserved: !state.rockets[action.payload].reserved,
-        },
-      },
-    }),
-  },
+  reducers: {},
   extraReducers: {
     [getTopMovies.pending]: (state) => ({
       ...state,
@@ -38,5 +27,4 @@ const topMoviesSlice = createSlice({
   },
 });
 
-// export const { updateRocket } = rockets.actions;
 export default topMoviesSlice.reducer;

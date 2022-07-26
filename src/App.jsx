@@ -16,9 +16,9 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getTopStars());
-    dispatch(getTopMovies());
     dispatch(getCurrentMovies());
+    dispatch(getTopMovies());
+    dispatch(getTopStars());
   }, []);
 
   return (
