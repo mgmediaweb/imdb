@@ -33,13 +33,15 @@ const Card = (props) => {
 Card.propTypes = {
   id: PropTypes.string.isRequired,
   image: PropTypes.string,
-  rating: PropTypes.string.isRequired,
+  rating: PropTypes.string,
   title: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
 };
 
 Card.defaultProps = {
   image: 'https://imdb-api.com/images/128x176/nopicture.jpg',
+  rating: '0.0',
+  type: 'theaters',
 };
 
 export default Card;

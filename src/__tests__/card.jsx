@@ -4,22 +4,21 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Card from '../components/card/Card';
 
-const cardRender = () => {
-  const cardProps = {
-    id: 'abc001',
-    title: 'Back to the Future',
-    rating: 0,
-    type: 'theaters',
-  };
-
-  return (
-    <BrowserRouter>
-      <Card id={cardProps.id} title={cardProps.title} />
-    </BrowserRouter>
-  );
+const cardProps = {
+  id: 'abc001',
+  title: 'Back to the Future',
 };
 
+const cardRender = () => (
+  <BrowserRouter>
+    <Card
+      id={cardProps.id}
+      title={cardProps.title}
+    />
+  </BrowserRouter>
+);
+
 test('Card displayed', () => {
-  render(<Card />, { wrapper: cardRender });
+  render(<Card id={cardProps.id} title={cardProps.title} />, { wrapper: cardRender });
   expect(screen.getByText('Back to the Future')).toBeInTheDocument();
 });

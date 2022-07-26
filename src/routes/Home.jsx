@@ -47,7 +47,6 @@ const HomeScreen = () => {
   };
 
   const makeGenreSelector = () => {
-    console.log('makeGenreSelector');
     genreSelector = {};
 
     Object.keys(inTheaters).forEach((element) => {
