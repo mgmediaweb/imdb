@@ -2,7 +2,13 @@
 
 # IMDB
 
-> Information comming soon.
+> Webapp that shows a catalog of the movies that are available in theaters now, in addition to showing their image and title, indicates the rating it has. It also shows a ranking of the 20 most popular movies in history.
+
+Finally, it shows a list of the 10 most top actors of the moment.
+
+By clicking on a movie you can see its details, know its duration, age rating, directors, its main actors, as well as a summary of the plot.
+
+You can also see a trailer for this movie at the top of this page.
 
 
 ## Built With
@@ -15,7 +21,7 @@
 
 ## Live Demo
 
-[mv-space-travelers-hub.herokuapp.com](https://mv-space-travelers-hub.herokuapp.com/)
+[https://mv-imdb.herokuapp.com/](https://mv-imdb.herokuapp.com/)
 
 ### Prerequisites
 

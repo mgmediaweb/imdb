@@ -132,6 +132,14 @@ section {
   padding: 0 $padding;
 }
 
+.selector {
+  background-color: $color-secondary;
+  border-radius: $rounded;
+  margin-bottom: $padding;  
+  padding: $padding;
+  width: 100%;
+}
+
 .slider-win {
   align-items: center;
   display: flex;

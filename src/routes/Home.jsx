@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiWifiOff } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
 import { SpinnerCircularFixed } from 'spinners-react';
@@ -9,6 +9,23 @@ const HomeScreen = () => {
   const { movies: inTheaters, status: moviesStatus } = useSelector((state) => state.inTheaters);
   const { movies: topMovies, status: topMoviesStatus } = useSelector((state) => state.topMovies);
   const { stars } = useSelector((state) => state.topStars);
+  const [moviesShow, setMoviesShow] = useState({});
+  const [genres, setGenres] = useState({});
+
+  const genreSelector = {};
+
+  const filterMovies = (event) => {
+    if (event.target.value !== '') {
+      Object.keys(inTheaters).forEach((item) => {
+        inTheaters[item].genre.forEach((element) => {
+          if (element.value === event.target.value) genreSelector[item] = inTheaters[item];
+        });
+      });
+      setMoviesShow(genreSelector);
+    } else {
+      setMoviesShow(inTheaters);
+    }
+  };
 
   const moviesList = (status, movies, type) => {
     switch (status) {
@@ -29,13 +46,38 @@ const HomeScreen = () => {
     }
   };
 
+  const makeGenreSelector = () => {
+    Object.keys(inTheaters).forEach((element) => {
+      const tempData = inTheaters[element].genre;
+
+      tempData.forEach((genre) => {
+        if (genreSelector[genre.value]) genreSelector[genre.value] += 1;
+        else genreSelector[genre.value] = 1;
+      });
+    });
+    setGenres(genreSelector);
+  };
+
+  useEffect(() => {
+    setMoviesShow(inTheaters);
+  }, [inTheaters]);
+
+  useEffect(() => {
+    makeGenreSelector();
+  }, []);
+
   return (
     <div className="container space-header">
       <section>
         <h3>Movies in Theaters</h3>
-        { moviesList(moviesStatus, inTheaters, 'theaters') }
+        <select className="selector" onChange={filterMovies}>
+          <option value="">Select a Genre</option>
+          {
+            Object.keys(genres).length && Object.keys(genres).map((genre) => (<option value={genre} key={genre}>{`${genre} (${genres[genre]})`}</option>))
+          }
+        </select>
+        { moviesList(moviesStatus, moviesShow, 'theaters') }
       </section>
-
       <section>
         <h3>Top Movies</h3>
         { moviesList(topMoviesStatus, topMovies, 'top') }

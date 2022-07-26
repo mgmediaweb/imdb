@@ -36,7 +36,7 @@ const createMovieList = (obj, qty) => {
         runtime: newRuntime,
         stars: newStars,
         title: item.title,
-        year: item.year,
+        year: parseInt(item.year, 10),
       },
     };
   });
