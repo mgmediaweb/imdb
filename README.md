@@ -1,21 +1,31 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Space Travelers' Hub
+# IMDB
 
-> Website App of the lists of rockets and missions available in the company Space X, here you can reserve the rockets you prefer, you can also select the missions you would like to attend.
+> Webapp that shows a catalog of the movies that are available in theaters now, in addition to showing their image and title, indicates the rating it has. It also shows a ranking of the 20 most popular movies in history.
+
+> Finally, it shows a list of the 10 most top actors of the moment.
+
+> By clicking on a movie you can see its details, know its duration, age rating, directors, its main actors, as well as a summary of the plot.
+
+> You can also see a trailer for this movie at the top of this page.
+
+## Video Presentation
+
+[See LOOM](https://www.loom.com/share/703233aa50874ec1bbac68140377c7f7)
 
 
 ## Built With
 
 - REACT JS.
 - JAVASCRIPT ES6.
-- REACT ROUTER
-- REDUX TOOLKIT
+- REACT ROUTER.
+- REDUX TOOLKIT.
 - SASS.
 
 ## Live Demo
 
-[mv-space-travelers-hub.herokuapp.com](https://mv-space-travelers-hub.herokuapp.com/)
+[https://mv-imdb.herokuapp.com/](https://mv-imdb.herokuapp.com/)
 
 ### Prerequisites
 
@@ -46,12 +56,6 @@ To view this document on your local computer:
 - Twitter: [@GonzoMedinaDev](https://twitter.com/GonzoMedinaDev)
 - LinkedIn: [gonzalo-medina-g](https://www.linkedin.com/in/gonzalo-medina-g/)
 
-👤 **Waqas Ahmad**
-
-- GitHub: [@githubhandle](https://github.com/waqaskanju)
-- Twitter: [@twitterhandle](https://twitter.com/waqaskanju)
-- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/waqaskanju/)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -64,9 +68,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+This site is based on the design created by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio), this design is under the free license [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## 📝 License
 
