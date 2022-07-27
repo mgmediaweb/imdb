@@ -68,9 +68,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+This site is based on the design created by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio), this design is under the free license [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## 📝 License
 
