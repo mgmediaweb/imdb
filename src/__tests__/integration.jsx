@@ -14,7 +14,6 @@ const MockApp = () => (
 describe('Integration Test', () => {
   it('MockApp', async () => {
     render(<MockApp />);
-
-    expect(screen.getByText('asia')).toBeInTheDocument();
+    expect(screen.getByText('Movies in Theaters')).toBeInTheDocument();
   });
 });

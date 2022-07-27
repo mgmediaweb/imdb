@@ -4,23 +4,23 @@
 
 > Webapp that shows a catalog of the movies that are available in theaters now, in addition to showing their image and title, indicates the rating it has. It also shows a ranking of the 20 most popular movies in history.
 
-Finally, it shows a list of the 10 most top actors of the moment.
+> Finally, it shows a list of the 10 most top actors of the moment.
 
-By clicking on a movie you can see its details, know its duration, age rating, directors, its main actors, as well as a summary of the plot.
+> By clicking on a movie you can see its details, know its duration, age rating, directors, its main actors, as well as a summary of the plot.
 
-You can also see a trailer for this movie at the top of this page.
+> You can also see a trailer for this movie at the top of this page.
 
-## VIDEO PRESENTATION
+## Video Presentation
 
-[SEE LOOM](https://www.loom.com/share/703233aa50874ec1bbac68140377c7f7)
+[See LOOM](https://www.loom.com/share/703233aa50874ec1bbac68140377c7f7)
 
 
 ## Built With
 
 - REACT JS.
 - JAVASCRIPT ES6.
-- REACT ROUTER
-- REDUX TOOLKIT
+- REACT ROUTER.
+- REDUX TOOLKIT.
 - SASS.
 
 ## Live Demo
