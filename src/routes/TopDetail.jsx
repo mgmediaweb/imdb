@@ -5,9 +5,9 @@ import { FaStar } from 'react-icons/fa';
 import Cast from '../components/cast/Cast';
 import api from '../variables';
 
-const DetailScreen = () => {
+const TopDetailScreen = () => {
   const { id } = useParams();
-  const { movies } = useSelector((state) => state.inTheaters);
+  const { movies } = useSelector((state) => state.topMovies);
 
   const [trailer, setTrailer] = useState(false);
   const [stars, setStars] = useState([]);
@@ -44,7 +44,7 @@ const DetailScreen = () => {
           <div className="top-info">
             <div>
               <h1>{ movies[id].title !== undefined ? movies[id].title : '...' }</h1>
-              <p className="info">{`${movies[id].year} • ${movies[id].content} • ${movies[id].runtime} min.`}</p>
+              <p className="info">{`${movies[id].year}`}</p>
             </div>
             <div>
               <p className="rating">
@@ -65,20 +65,6 @@ const DetailScreen = () => {
             )
           }
 
-          <ul className="genreList">
-            {
-              movies[id].genre.length && (movies[id].genre.map((item) => (
-                <li key={item.value}>{item.value}</li>
-              )))
-            }
-          </ul>
-
-          <p>{movies[id].plot}</p>
-
-          <p className="hightligts">
-            <strong>Director</strong>
-            {movies[id].director}
-          </p>
           <p className="hightligts">
             <strong>Stars</strong>
             {movies[id].stars}
@@ -91,4 +77,4 @@ const DetailScreen = () => {
   );
 };
 
-export default DetailScreen;
+export default TopDetailScreen;

@@ -1,17 +1,18 @@
 // Colors
-$color-background: #000000;
-$color-border: #c1c1c1;
-$color-danger: #b10000;
-$color-primary: #1f6193;
 $color-active: #008b8b;
-$color-secondary: #454545;
-$color-black: #232323;
+$color-background: #000;
+$color-danger: #b10000;
+$color-header: #121212;
+$color-primary: #f5c518;
+$color-secondary: #aaa;
 $color-white: #fff;
 
 // Breakbpoints
+$breakpoint-desktop: 1080px;
 $breakpoint-tablet: 760px;
 
-$header-height: 96px;
+$header-height: 60px;
 $padding: 10px;
-$rounded: $padding/2;
+$rounded: 4px;
 $transition: 0.5s;
+$spacer: $padding*3;

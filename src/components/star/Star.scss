@@ -1,0 +1,33 @@
+@import "../../config";
+
+.star {
+  &-box {
+    height: auto;
+    padding: $padding !important;
+    text-align: center !important;
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 3px 0;
+    }
+
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &-image {
+    background-color: #e7e9e9;
+    background-image: url(../../assets/images/empty-profile.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 75px;
+    height: 150px;
+    margin-bottom: calc($padding/2);
+    width: 150px;
+  }
+}

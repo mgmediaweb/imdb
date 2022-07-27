@@ -2,11 +2,11 @@
 
 footer {
   align-items: center;
-  border-top: solid 1px $color-border;
+  color: $color-secondary;
   display: flex;
-  height: 100px;
+  height: 80px;
   justify-content: center;
-  margin-top: $padding*2;
+  font-size: 0.8rem;
   margin-bottom: $padding*4.5;
   width: 100%;
 }

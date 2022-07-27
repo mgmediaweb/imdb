@@ -1,0 +1,21 @@
+@import "../../config";
+
+.cast-list {
+  background-color: $color-white;
+  color: $color-background;
+  display: flex;
+  height: auto;
+  min-height: 100px;
+  overflow-y: auto;
+  width: 100%;
+
+  .no-items {
+    align-items: center;
+    color: $color-background;
+    display: flex;
+    height: 150px;
+    font-size: 0.9rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
